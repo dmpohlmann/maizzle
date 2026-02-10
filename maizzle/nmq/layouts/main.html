@@ -1,10 +1,12 @@
-<!doctype {{{ page.doctype || 'html' }}}>
+<!DOCTYPE {{{ page.doctype || 'html' }}}>
 <html lang="{{ page.language || 'en' }}" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
   <meta charset="{{ page.charset || 'utf-8' }}">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <!--[if mso]>
   <noscript>
     <xml>
@@ -15,46 +17,34 @@
   </noscript>
   <style>
     td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+    .mso-break-all {word-break: break-all;}
   </style>
   <![endif]-->
   <if condition="page.title">
     <title>{{{ page.title }}}</title>
   </if>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" media="screen">
   <style>
-    @tailwind utilities;
     @tailwind components;
+    @tailwind utilities;
+
+    img {
+      @apply max-w-full align-middle;
+    }
   </style>
   <stack name="head" />
 </head>
-<body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || 'bg-slate-100' }}">
+<body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || '' }}">
   <if condition="page.preheader">
     <div class="hidden">
       {{{ page.preheader }}}
-      <each loop="item in Array.from(Array(150))">&#847; </each>
+      <each loop="item in Array.from(Array(150))">&#8199;&#65279;&#847; </each>
     </div>
   </if>
-
-  <div
-    align="center"
-    role="article"
-    aria-roledescription="email"
-    lang="{{ page.language || 'en' }}"
-    class="{{ page.bodyClass || 'bg-slate-100' }}"
-    aria-label="{{{ page.title || '' }}}"
-  >
-    <table class="font-sans">
-      <tr>
-        <td class="w-[600px] max-w-full bg-white rounded-xl">
-          <table class="w-full">
-            <tr>
-              <td class="p-0 px-8 sm:px-4 text-base/6 text-slate-700">
-                <yield />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+  <div role="article" aria-roledescription="email" aria-label="{{{ page.title || '' }}}" lang="{{ page.language || 'en' }}">
+    <yield />
   </div>
 </body>
 </html>
