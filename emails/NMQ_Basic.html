@@ -3,44 +3,56 @@ title:  Northmarque news
 ---
 
 <x-main>
-<table>
-      <tr>
-        <td>
-          <x-view_email />
-        </td>
-      </tr>
-      <tr>
-        <td class="w-[660px] max-w-[100vw]">
-          <table class="w-full max-w-[100vw]">
-            <tr>
-              <td class="p-0">
-                <x-news_hdr />
-              </td>
-            </tr>
-            <tr>
-              <td class="pr-3 bg-nmqpink-02">
-                <p class="pr-0 text-base/[0.9rem] sm:text-sm/[0.9rem] font-roboto font-semibold text-right">
-                  {{ Date "02–Jan–2006" }}
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <component src="news20260213/20260213_00-Intro.html" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <component src="news20260213/20260213_01-BCM_update.html" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <component src="news20260213/20260213_02-AGM.html" />
-              </td>
-            </tr>
-          </table>
-        </td>
+<table class="w-full max-w-[100vw]">
+
+  <!-- 01. View email link -->
+  <tr>
+    <td>
+      <x-view_email />
+    </td>
+  </tr>
+  <!--  -->
+
+  <!-- 02. Main header -->
+  <tr>
+    <td class="p-0">
+      <x-news_hdr />
+    </td>
+  </tr>
+  <tr>
+    <td class="pr-3 bg-nmqpink-02">
+      <p class="pr-0 text-base/[0.9rem] sm:text-sm/[0.9rem] font-roboto font-semibold text-right">
+        {{ Date "02–Jan–2006" }}
+      </p>
+    </td>
+  </tr>
+  <!--  -->
+
+  <!-- 03. Main content -->
+  <tr>
+    <td>
+      <component src="news20260213/20260213_00-Intro.html" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <component src="news20260213/20260213_01-BCM_update.html" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <component src="news20260213/20260213_02-AGM.html" />
+    </td>
+  </tr>
+  <!--  -->
+
+  <!-- 04. Footer -->
+  <tr>
+    <td>
+      <x-footer />
+    </td>
+  </tr>
+  <!--  -->
+
 </table>
-<x-footer
 </x-main>
