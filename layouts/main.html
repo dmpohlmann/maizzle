@@ -5,6 +5,7 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+
   <!--[if mso]>
   <noscript>
     <xml>
@@ -20,6 +21,12 @@
   <if condition="page.title">
     <title>{{{ page.title }}}</title>
   </if>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <style>
     @tailwind utilities;
     @tailwind components;
@@ -39,15 +46,15 @@
     role="article"
     aria-roledescription="email"
     lang="{{ page.language || 'en' }}"
-    class="{{ page.bodyClass || 'bg-slate-100' }}"
+    class="{{ page.bodyClass || 'bg-nmqgreen-05' }}"
     aria-label="{{{ page.title || '' }}}"
   >
-    <table class="font-sans">
+    <table class="font-roboto">
       <tr>
         <td class="w-[660px] max-w-full bg-white">
           <table class="w-full">
             <tr>
-              <td class="p-0 px-8 sm:px-4 text-base/6 text-slate-700">
+              <td>
                 <yield />
               </td>
             </tr>
@@ -57,4 +64,5 @@
     </table>
   </div>
 </body>
+{{ TrackView }}
 </html>

@@ -17,5 +17,8 @@ export default {
       source: ['images/**/*.*'],
       destination: 'images',
     },
+  css: {
+    sixHex: false,
+  }
   },
 }
