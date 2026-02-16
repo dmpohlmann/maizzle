@@ -33,7 +33,7 @@
   </style>
   <stack name="head" />
 </head>
-<body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] ">
+<body class="m-0 p-0 w-[100vw] [word-break:break-word] [-webkit-font-smoothing:antialiased] ">
   <if condition="page.preheader">
     <div class="hidden">
       {{{ page.preheader }}}
@@ -46,8 +46,8 @@
     role="article"
     aria-roledescription="email"
     lang="{{ page.language || 'en' }}"
-    <!-- class="{{ page.bodyClass || 'bg-nmqgreen-05' }}" -->
-    <!-- aria-label="{{{ page.title || '' }}}" -->
+
+    aria-label="{{{ page.title || '' }}}">
 
     <table class="font-roboto">
       <tr>
