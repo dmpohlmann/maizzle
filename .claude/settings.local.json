@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.keila.io)"
+      "WebFetch(domain:www.keila.io)",
+      "Bash(node _generate-palette.cjs)",
+      "Bash(node -e \"console.log\\(''test''\\)\")",
+      "Bash(node -e \"console.log\\(''hello''\\)\")",
+      "Bash(where node)",
+      "Bash(node C:/Users/david/repositories/maizzle/_generate-palette.cjs)",
+      "Bash(find news/ -name '*.html' -exec sed -i -e 's/bg-nmqgreen-00/bg-nmq-green-500/g' -e 's/text-nmqgreen-00/text-nmq-green-500/g' -e 's/text-nmqgreen-05/text-nmq-green-50/g' -e 's/bg-nmqpink-02/bg-nmq-pink-300/g' -e 's/text-nmqgrey-00/text-nmq-dark-500/g' -e 's/bg-nmqgrey-00/bg-nmq-dark-500/g' -e 's/bg-article-00/bg-nmq-burgundy-500/g' -e 's/border-nmqgreen-00/border-nmq-green-500/g' -e 's/text-nmq-logo\\\\b/text-nmq-logo-500/g' {} +)",
+      "Bash(node -e \":*)"
     ]
   }
 }

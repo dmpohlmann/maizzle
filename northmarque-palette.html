@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northmarque – Full Colour Palette</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #f5f4f2; color: #333; padding: 40px 20px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  h1 { font-size: 2.4rem; font-weight: 700; color: #384741; margin-bottom: 4px; }
+  .subtitle { font-size: 1rem; color: #6A7D70; margin-bottom: 48px; font-weight: 400; }
+
+  h2 { font-size: 1.4rem; font-weight: 600; color: #384741; margin: 48px 0 20px; border-bottom: 2px solid #384741; padding-bottom: 8px; }
+  h3 { font-size: 1.05rem; font-weight: 600; color: #414042; margin: 32px 0 12px; }
+
+  /* Base colour cards */
+  .base-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; }
+  .color-card { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .color-card .swatch { height: 100px; display: flex; align-items: flex-end; padding: 8px 12px; }
+  .color-card .swatch span { font-size: 0.7rem; font-weight: 500; padding: 2px 6px; border-radius: 4px; }
+  .color-card .info { padding: 12px; }
+  .color-card .info .name { font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
+  .color-card .info .hex { font-size: 0.78rem; color: #666; font-family: 'Courier New', monospace; }
+  .color-card .info .rgb { font-size: 0.7rem; color: #999; font-family: 'Courier New', monospace; }
+  .color-card .info .wcag { font-size: 0.65rem; margin-top: 4px; padding: 2px 6px; border-radius: 3px; display: inline-block; }
+  .wcag-pass { background: #d4edda; color: #155724; }
+  .wcag-fail { background: #f8d7da; color: #721c24; }
+
+  /* Shade/tint strips */
+  .scale-section { margin-bottom: 36px; }
+  .scale-label { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: #414042; }
+  .scale-row { display: flex; gap: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .scale-cell { flex: 1; min-height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 2px; transition: transform 0.15s; }
+  .scale-cell:hover { transform: scaleY(1.08); z-index: 2; }
+  .scale-cell .lbl { font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .scale-cell .hex-lbl { font-size: 0.6rem; font-family: 'Courier New', monospace; }
+
+  /* Complementary */
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .comp-card { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .comp-card .swatch { height: 90px; }
+  .comp-card .info { padding: 12px; }
+  .comp-card .info .name { font-weight: 600; font-size: 0.85rem; margin-bottom: 2px; }
+  .comp-card .info .hex { font-size: 0.78rem; color: #666; font-family: 'Courier New', monospace; }
+  .comp-card .info .use { font-size: 0.7rem; color: #888; margin-top: 4px; line-height: 1.4; }
+
+  /* Accessibility table */
+  .a11y-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.78rem; }
+  .a11y-table th, .a11y-table td { padding: 8px 12px; border: 1px solid #e0e0e0; text-align: left; }
+  .a11y-table th { background: #384741; color: #fff; font-weight: 600; }
+  .a11y-table tr:nth-child(even) { background: #f9f9f9; }
+  .pair-preview { display: inline-block; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 0.75rem; margin-right: 6px; }
+
+  .note { font-size: 0.75rem; color: #888; margin-top: 8px; line-height: 1.5; }
+  .section-note { font-size: 0.82rem; color: #666; margin-bottom: 16px; line-height: 1.5; }
+
+  @media (max-width: 600px) {
+    .scale-cell .hex-lbl { font-size: 0.5rem; }
+    .scale-cell { min-height: 56px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Northmarque</h1>
+<p class="subtitle">Brand Colour Palette – Base, Complementary, Shades &amp; Tints</p>
+
+<!-- ===================== BASE COLOURS ===================== -->
+<h2>Base Colours</h2>
+<p class="section-note">The six core brand colours as defined in the Northmarque brand guidelines.</p>
+<div class="base-grid" id="baseGrid"></div>
+
+<!-- ===================== COMPLEMENTARY ===================== -->
+<h2>Complementary Colours</h2>
+<p class="section-note">Suggested additions to round out the palette — a deep navy, warm cream, rich burgundy, earthy terracotta, and a soft sage.</p>
+<div class="comp-grid" id="compGrid"></div>
+
+<!-- ===================== SHADES & TINTS ===================== -->
+<h2>Shades &amp; Tints</h2>
+<p class="section-note">Five tints (lighter, toward white) and five shades (darker, toward black) for each colour. The centre swatch is the original.</p>
+<h3>Base Colours</h3>
+<div id="scalesContainer"></div>
+<h3>Complementary Colours</h3>
+<div id="compScalesContainer"></div>
+
+<!-- ===================== ACCESSIBILITY ===================== -->
+<h2>Accessibility – Key Pairings</h2>
+<p class="section-note">WCAG 2.1 contrast ratios for common foreground/background combinations. AA requires ≥ 4.5:1 for normal text; AAA requires ≥ 7:1.</p>
+<table class="a11y-table" id="a11yTable">
+  <thead><tr><th>Pairing</th><th>Preview</th><th>Ratio</th><th>AA Normal</th><th>AA Large</th><th>AAA Normal</th></tr></thead>
+  <tbody></tbody>
+</table>
+<p class="note">Ratios calculated per WCAG 2.1. "Large" text is ≥ 18pt (or 14pt bold).</p>
+
+</div>
+
+<script>
+// ── Colour Data ──
+const baseColors = [
+  { name: 'Logo Green',   hex: '#384741', rgb: '56, 72, 66' },
+  { name: 'Dark Grey',    hex: '#414042', rgb: '65, 65, 67' },
+  { name: 'Grey',         hex: '#9D9A9B', rgb: '158, 154, 155' },
+  { name: 'Green',        hex: '#6A7D70', rgb: '107, 126, 113' },
+  { name: 'Yellow',       hex: '#E4C071', rgb: '230, 193, 114' },
+  { name: 'Pink',         hex: '#E68E8A', rgb: '230, 143, 139' },
+];
+
+const compColors = [
+  { name: 'Navy',        hex: '#2C3E50', use: 'Deep contrast alternative to dark grey — headings, footers, dark UI.' },
+  { name: 'Slate Blue',  hex: '#5B7B8A', use: 'Mid-tone blue for secondary elements, links, accents.' },
+  { name: 'Cream',       hex: '#F7F3EB', use: 'Warm off-white background — softer than pure white.' },
+  { name: 'Ivory',       hex: '#FFFDF5', use: 'Lighter neutral for cards, panels, light sections.' },
+  { name: 'Burgundy',    hex: '#7A3B4E', use: 'Rich accent for CTAs, alerts, emphasis alongside pink.' },
+  { name: 'Terracotta',  hex: '#C47B5A', use: 'Warm earthy tone — badges, highlights, secondary buttons.' },
+  { name: 'Sage',        hex: '#A8BFA8', use: 'Soft light green for backgrounds, success states, cards.' },
+];
+
+// ── Utility functions ──
+function hexToRgb(hex) {
+  const r = parseInt(hex.slice(1,3), 16);
+  const g = parseInt(hex.slice(3,5), 16);
+  const b = parseInt(hex.slice(5,7), 16);
+  return { r, g, b };
+}
+function rgbToHex(r, g, b) {
+  return '#' + [r,g,b].map(x => Math.round(Math.min(255, Math.max(0, x))).toString(16).padStart(2,'0')).join('').toUpperCase();
+}
+function luminance(r, g, b) {
+  const [rs, gs, bs] = [r,g,b].map(v => { v /= 255; return v <= 0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4); });
+  return 0.2126*rs + 0.7152*gs + 0.0722*bs;
+}
+function contrastRatio(hex1, hex2) {
+  const c1 = hexToRgb(hex1), c2 = hexToRgb(hex2);
+  const l1 = luminance(c1.r, c1.g, c1.b), l2 = luminance(c2.r, c2.g, c2.b);
+  const lighter = Math.max(l1,l2), darker = Math.min(l1,l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+function textColor(hex) {
+  const {r,g,b} = hexToRgb(hex);
+  return luminance(r,g,b) > 0.35 ? '#333333' : '#FFFFFF';
+}
+
+// Generate tints (mix with white) and shades (mix with black)
+function tint(hex, factor) {
+  const {r,g,b} = hexToRgb(hex);
+  return rgbToHex(r + (255-r)*factor, g + (255-g)*factor, b + (255-b)*factor);
+}
+function shade(hex, factor) {
+  const {r,g,b} = hexToRgb(hex);
+  return rgbToHex(r*(1-factor), g*(1-factor), b*(1-factor));
+}
+
+// ── Render Base Colours ──
+const baseGrid = document.getElementById('baseGrid');
+baseColors.forEach(c => {
+  const tc = textColor(c.hex);
+  const ratio = contrastRatio(c.hex, '#FFFFFF');
+  const passAA = ratio >= 4.5;
+  baseGrid.innerHTML += `
+    <div class="color-card">
+      <div class="swatch" style="background:${c.hex}">
+        <span style="color:${tc};background:rgba(${tc==='#FFFFFF'?'0,0,0':'255,255,255'},0.15)">${c.hex}</span>
+      </div>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="hex">${c.hex}</div>
+        <div class="rgb">RGB ${c.rgb}</div>
+        <span class="wcag ${passAA ? 'wcag-pass' : 'wcag-fail'}">on white: ${ratio.toFixed(1)}:1 ${passAA ? '✓ AA' : '✗ AA'}</span>
+      </div>
+    </div>`;
+});
+
+// ── Render Complementary ──
+const compGrid = document.getElementById('compGrid');
+compColors.forEach(c => {
+  const tc = textColor(c.hex);
+  compGrid.innerHTML += `
+    <div class="comp-card">
+      <div class="swatch" style="background:${c.hex};display:flex;align-items:flex-end;padding:8px 12px">
+        <span style="color:${tc};font-size:0.72rem;font-family:'Courier New',monospace;font-weight:500">${c.hex}</span>
+      </div>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="hex">${c.hex}</div>
+        <div class="use">${c.use}</div>
+      </div>
+    </div>`;
+});
+
+// ── Render Shades & Tints ──
+const scalesContainer = document.getElementById('scalesContainer');
+const steps = 5;
+baseColors.forEach(c => {
+  let cells = '';
+  // 5 tints (lightest first)
+  for (let i = steps; i >= 1; i--) {
+    const factor = i * 0.15; // 75%, 60%, 45%, 30%, 15%
+    const h = tint(c.hex, factor);
+    const tc = textColor(h);
+    const label = `+${i * 15}%`;
+    cells += `<div class="scale-cell" style="background:${h}"><span class="lbl" style="color:${tc}">${label}</span><span class="hex-lbl" style="color:${tc}">${h}</span></div>`;
+  }
+  // Base
+  const tcBase = textColor(c.hex);
+  cells += `<div class="scale-cell" style="background:${c.hex};outline:2px solid #333;outline-offset:-2px;z-index:1"><span class="lbl" style="color:${tcBase}">BASE</span><span class="hex-lbl" style="color:${tcBase}">${c.hex.toUpperCase()}</span></div>`;
+  // 5 shades (darkest last)
+  for (let i = 1; i <= steps; i++) {
+    const factor = i * 0.15;
+    const h = shade(c.hex, factor);
+    const tc = textColor(h);
+    const label = `−${i * 15}%`;
+    cells += `<div class="scale-cell" style="background:${h}"><span class="lbl" style="color:${tc}">${label}</span><span class="hex-lbl" style="color:${tc}">${h}</span></div>`;
+  }
+
+  scalesContainer.innerHTML += `
+    <div class="scale-section">
+      <div class="scale-label">${c.name} <span style="color:#999;font-weight:400">${c.hex}</span></div>
+      <div class="scale-row">${cells}</div>
+    </div>`;
+});
+
+// ── Render Complementary Shades & Tints ──
+const compScalesContainer = document.getElementById('compScalesContainer');
+compColors.forEach(c => {
+  let cells = '';
+  // 5 tints (lightest first)
+  for (let i = steps; i >= 1; i--) {
+    const factor = i * 0.15;
+    const h = tint(c.hex, factor);
+    const tc = textColor(h);
+    const label = `+${i * 15}%`;
+    cells += `<div class="scale-cell" style="background:${h}"><span class="lbl" style="color:${tc}">${label}</span><span class="hex-lbl" style="color:${tc}">${h}</span></div>`;
+  }
+  // Base
+  const tcBase = textColor(c.hex);
+  cells += `<div class="scale-cell" style="background:${c.hex};outline:2px solid #333;outline-offset:-2px;z-index:1"><span class="lbl" style="color:${tcBase}">BASE</span><span class="hex-lbl" style="color:${tcBase}">${c.hex.toUpperCase()}</span></div>`;
+  // 5 shades (darkest last)
+  for (let i = 1; i <= steps; i++) {
+    const factor = i * 0.15;
+    const h = shade(c.hex, factor);
+    const tc = textColor(h);
+    const label = `−${i * 15}%`;
+    cells += `<div class="scale-cell" style="background:${h}"><span class="lbl" style="color:${tc}">${label}</span><span class="hex-lbl" style="color:${tc}">${h}</span></div>`;
+  }
+
+  compScalesContainer.innerHTML += `
+    <div class="scale-section">
+      <div class="scale-label">${c.name} <span style="color:#999;font-weight:400">${c.hex}</span></div>
+      <div class="scale-row">${cells}</div>
+    </div>`;
+});
+
+// ── Accessibility Table ──
+const pairings = [
+  { fg: '#384741', bg: '#FFFFFF', label: 'Logo Green on White' },
+  { fg: '#FFFFFF', bg: '#384741', label: 'White on Logo Green' },
+  { fg: '#414042', bg: '#FFFFFF', label: 'Dark Grey on White' },
+  { fg: '#384741', bg: '#F7F3EB', label: 'Logo Green on Cream' },
+  { fg: '#414042', bg: '#F7F3EB', label: 'Dark Grey on Cream' },
+  { fg: '#2C3E50', bg: '#FFFFFF', label: 'Navy on White' },
+  { fg: '#FFFFFF', bg: '#2C3E50', label: 'White on Navy' },
+  { fg: '#7A3B4E', bg: '#FFFFFF', label: 'Burgundy on White' },
+  { fg: '#384741', bg: '#E4C071', label: 'Logo Green on Yellow' },
+  { fg: '#384741', bg: '#E68E8A', label: 'Logo Green on Pink' },
+  { fg: '#414042', bg: '#A8BFA8', label: 'Dark Grey on Sage' },
+  { fg: '#414042', bg: '#9D9A9B', label: 'Dark Grey on Grey' },
+  { fg: '#FFFFFF', bg: '#7A3B4E', label: 'White on Burgundy' },
+  { fg: '#2C3E50', bg: '#E4C071', label: 'Navy on Yellow' },
+  { fg: '#2C3E50', bg: '#E68E8A', label: 'Navy on Pink' },
+  { fg: '#6A7D70', bg: '#FFFFFF', label: 'Green on White' },
+  { fg: '#FFFFFF', bg: '#6A7D70', label: 'White on Green' },
+];
+
+const tbody = document.querySelector('#a11yTable tbody');
+pairings.forEach(p => {
+  const ratio = contrastRatio(p.fg, p.bg);
+  const aaNorm = ratio >= 4.5;
+  const aaLarge = ratio >= 3;
+  const aaaNorm = ratio >= 7;
+  tbody.innerHTML += `<tr>
+    <td>${p.label}</td>
+    <td><span class="pair-preview" style="background:${p.bg};color:${p.fg};border:1px solid #ddd">Aa</span></td>
+    <td><strong>${ratio.toFixed(2)}:1</strong></td>
+    <td class="${aaNorm?'wcag-pass':'wcag-fail'}">${aaNorm?'✓ Pass':'✗ Fail'}</td>
+    <td class="${aaLarge?'wcag-pass':'wcag-fail'}">${aaLarge?'✓ Pass':'✗ Fail'}</td>
+    <td class="${aaaNorm?'wcag-pass':'wcag-fail'}">${aaaNorm?'✓ Pass':'✗ Fail'}</td>
+  </tr>`;
+});
+</script>
+</body>
+</html>
