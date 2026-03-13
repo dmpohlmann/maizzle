@@ -1,0 +1,119 @@
+View this email in your browser: [[PERMALINK]]
+
+NORTHMARQUE NEWS
+13-Mar-2026
+
+---
+
+Hi Owners
+
+Welcome to the latest edition of Northmarque News.
+
+In this issue, we have an important reminder about keeping your details up to date on the body corporate roll - it's a legal requirement and we need every owner's help.
+
+We've also done some homework on our electricity costs and put together a detailed comparison showing how our embedded network stacks up against retail providers. Spoiler: we're doing pretty well.
+
+If there are any specific matters, questions or concerns you would like to raise after reading the remainder of this newsletter, please do not hesitate to contact us by email at community@northmarque.net.
+
+---
+
+*** IMPORTANT NOTICE ***
+Updating your information on the Body Corporate roll
+
+Queensland law requires lot owners to notify the body corporate within one month of any changes to their details - including your address, email, or tenant and lease arrangements. This is a legal requirement, not just a courtesy.
+
+We are currently reviewing the roll for accuracy, and we will be following up with any owners whose information is missing or out of date. Even if you are sure the details are correct, please visit the link and update your contact information.
+
+Please save us - and yourself - the trouble by completing the update now.
+
+>> Update the Body Corporate roll:
+   https://forms.nthmrq.net/forms/information-for-the-body-corporate-roll-jg4g1s
+
+---
+
+DID YOU KNOW?
+Energy costs - how does our embedded network stack up?
+Comparing Altogether Group rates
+
+We've conducted a comparison of our current electricity arrangement with Altogether Group against the next cheapest retail plans available on the Australian Government's comparison site Energy Made Easy (https://energymadeasy.gov.au). The short answer: the embedded network is delivering genuine savings for every owner in the scheme.
+
+This article gives an overview of how our electricity supply works and even includes a link to an interactive tool so you can see the results of our cost comparison yourself.
+
+HOW OUR ELECTRICITY SUPPLY WORKS
+
+Northmarque operates an embedded electricity network managed by Altogether Group. Rather than each lot having a separate connection to the Energex grid, the body corporate purchases electricity in bulk through a single 'gate meter' at a wholesale rate. Altogether then meters and bills each lot individually based on actual usage.
+
+This arrangement gives the scheme collective purchasing power that an individual household would not have. It also means our supply and usage rates are different from the standard retail plans you'd see advertised by energy companies.
+
+WHAT WE CURRENTLY PAY
+
+Our current Altogether rates are:
+
+  Supply charge:  $0.89 per day
+  Usage charge:   $0.26 per kWh
+
+HOW DOES THAT COMPARE TO OTHER OPTIONS?
+
+We reviewed the next 9 cheapest single-rate, fixed-price electricity plans available for our postcode (Carseldine, 4034) on Energy Made Easy. Every single retail plan was more expensive than Altogether Group.
+
+For a 2-person household, Altogether Group is at least $260 cheaper and up to an incredible $700 cheaper per year than any of the providers we compared.
+
+IT'S BETTER THAN JUST THE SAVINGS
+
+There is an important factor that these numbers don't show. The retail plan rates are bundled rates - they include both energy charges and network distribution charges, because those plans are designed for customers connected directly to the Energex grid.
+
+You do have the Power of Choice though. If you want to switch, you can! But you should know...
+
+If you were to switch to an external retailer, you would not pay the bundled rate. Instead, you need to ask the retailer for an 'energy only' offer (just the electricity itself). Then you would continue paying network charges to Altogether Group. That means a higher total cost than what the retail comparison websites show. Oh, and 2 bills!
+
+  NOTE: In short: the retail plans are already more expensive on paper -
+  and the real cost of switching from inside the embedded network would
+  be higher still.
+
+A FEW OTHER THINGS TO CONSIDER
+
+As we've said, you do have the legal right to choose an external retailer, but there are practical costs and complications on top of getting 2 bills.
+
+  1. Metering
+  A new retailer may need to replace the Altogether meter with their own. This may come with a connection fee and a brief period without supply during the changeover.
+
+  2. Retailer willingness
+  Not all retailers are willing to make offers to embedded network customers. The administrative complexity and low volume make it unattractive for some providers.
+
+  3. You pay all costs
+  All opt-out costs sit with the individual owner. Exit fees are capped at $20 in Queensland, but metering and connection charges are always additional and can vary.
+
+EXPLORE THE DATA YOURSELF
+
+We've built an interactive cost comparison tool that lets you select any of the nine retail providers and adjust for household size (one person through to five or more). It shows quarterly costs by season, annual savings, and the full rate table. You can also see all the assumptions clearly documented.
+
+>> Open the Interactive Comparison Tool:
+   https://nmqelecvis.netlify.app/
+
+Disclaimer: This analysis is provided for information purposes and is not financial advice. Rates are current at March 2026 and are subject to change. Estimated annual costs are based on AER consumption benchmarks for Climate Zone 2 (Brisbane) and may not reflect individual household usage. Government rebates, solar feed-in tariffs, conditional discounts, and time-of-use tariff variations are excluded. Owners are encouraged to compare offers independently at energymadeeasy.gov.au.
+
+---
+
+We aim to publish Northmarque News every 2-3 weeks. Until next time.
+
+---
+
+Contact us
+
+  Help and support:       support@northmarque.net
+  Property matters:       property@northmarque.net
+  General enquiries:      community@northmarque.net
+
+Location:                 Postal address:
+25 Northmarque Street     c/- BC Systems
+Carseldine Qld 4034      PO Box 743
+Australia                 Morningside Qld 4170
+
+---
+
+The Body Corporate for Northmarque Carseldine.
+(Community Title Scheme 43944)
+Copyright 2026. ALL RIGHTS RESERVED.
+
+This email was sent to [[EMAIL_TO]].
+Click here to unsubscribe: [[UNSUB_LINK_EN]]
